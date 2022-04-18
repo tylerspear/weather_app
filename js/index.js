@@ -1,3 +1,5 @@
+const key = config.API_KEY
+
 const locationEl = document.getElementById('data-location')
 const dayEl = document.getElementById('dt-day')
 const mainBG = document.getElementById('main-display')
@@ -5,7 +7,12 @@ const degEl = document.getElementById('data-degrees')
 const conditionEl = document.getElementById('data-condition')
 const humidityEl = document.getElementById('data-humidity')
 const hlEl = document.getElementById('data-high-low')
-const key = config.API_KEY
+const windEl = document.getElementById('data-wind')
+const feelsEl = document.getElementById('data-feels-like')
+const pressEl = document.getElementById('data-pressure')
+const uvEl = document.getElementById('data-uv')
+const vizEl = document.getElementById('data-viz')
+
 getDay()
 
 function getWeather(coords){
@@ -17,8 +24,13 @@ function getWeather(coords){
         console.log(data)
         degEl.innerHTML = data.current.temp + '&deg;'
         conditionEl.textContent = data.current.weather[0].main
-        humidityEl.textContent = data.current.humidity + '%'
+        humidityEl.textContent = `${data.current.humidity}%`
         hlEl.textContent = `${data.daily[0].temp.min} / ${data.daily[0].temp.max}`
+        windEl.textContent = `${data.current.wind_speed} mph`
+        feelsEl.textContent = `${data.current.feels_like}`
+        pressEl.textContent = `${data.current.pressure} mb`
+        uvEl.textContent = data.current.uvi
+        vizEl.textContent = `${data.current.visibility} m`
       })
       .catch(err => {
           console.log(`error ${err}`)
