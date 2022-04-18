@@ -12,6 +12,7 @@ const feelsEl = document.getElementById('data-feels-like')
 const pressEl = document.getElementById('data-pressure')
 const uvEl = document.getElementById('data-uv')
 const vizEl = document.getElementById('data-viz')
+const hourlyEl = document.getElementById('data-hourly-forecast')
 
 getDay()
 
@@ -31,6 +32,17 @@ function getWeather(coords){
         pressEl.textContent = `${data.current.pressure} mb`
         uvEl.textContent = data.current.uvi
         vizEl.textContent = `${data.current.visibility} m`
+        for(let i = 0; i < 20; i++) {
+          if(i % 2 === 0) {
+            let tr = document.createElement('tr')
+            tr.innerHTML = `
+              <td>${convertUTC(data.hourly[i].dt)}</td>
+              <td>${data.hourly[i].temp}</td>
+              <td>${data.hourly[i].weather[0].main}</td>
+              `
+            hourlyEl.appendChild(tr)
+          }
+        }
       })
       .catch(err => {
           console.log(`error ${err}`)
@@ -68,6 +80,12 @@ function getCoordsFromInput() {
 function getDay(){
   const day = new Date().toLocaleString('en-us', {  weekday: 'long' })
   dayEl.textContent = day
+}
+
+function convertUTC(timestamp){
+  let date = new Date(timestamp * 1000)
+  let hours = date.getHours()
+  return `${hours}:00`
 }
 
 document.getElementById('go').addEventListener('click', function(e){

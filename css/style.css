@@ -153,6 +153,20 @@ body {
   margin-left: 0.75rem;
 }
 
+.box tbody {
+  display: flex;
+  flex-direction: column;
+}
+.box tr {
+  display: flex;
+  justify-content: left;
+  margin-bottom: 0.5rem;
+}
+.box th, .box td {
+  flex: 0 1 15%;
+  text-align: left;
+}
+
 /******************************************
 /* Header
 /*******************************************/
