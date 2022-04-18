@@ -1,0 +1,164 @@
+/******************************************
+/* Variables
+/*******************************************/
+:root {
+  --green: #8AFFC0;
+  --light-grey: #4D4D4D;
+  --dark-grey: #2D2D2D;
+  --white: #fff;
+  --primary-font: 'Rubik', sans-serif;
+  --secondary-font: 'Sen', sans-serif;
+}
+
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+img{
+  display: block;
+  margin: 0 auto;
+}
+body {
+  background-color: var(--dark-grey);
+  color: var(--green);
+  font-family: var(--primary-font);
+}
+.container {
+  margin: 0 1rem;
+}
+.ml {
+  margin-left: 1rem;
+}
+.mb {
+  margin-bottom: 1rem;
+}
+
+/******************************************
+/* Header
+/*******************************************/
+#search {
+  text-align: center;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+}
+#search input {
+  border-radius: 5px;
+}
+#input:active, #input:focus {
+  outline: none;
+  color: var(--light-grey);
+}
+#input {
+  color: var(--light-grey);
+  padding: 0.5rem 0.75rem;
+}
+#date-time {
+  display: flex;
+  color: var(--white);
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+#date-time h3 {
+  margin-top: 0;
+  margin-right: 1rem;
+}
+#go, #go:active {
+  display: inline-block;
+  background-color: transparent;
+  border: 1px solid var(--green);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+#go:hover {
+  background-color: var(--green);
+  color: var(--dark-grey);
+}
+
+/******************************************
+/* Body
+/*******************************************/
+#location {
+  color: var(--white);
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.8rem;
+}
+#main-display {
+  margin-top: 2rem;
+  font-size: 2.5rem;
+  border-radius: 10px;
+  padding: 5rem 1rem;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--light-grey);
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+#main-display span {
+  font-size: 1.5rem;
+}
+#main-display::after {
+  content:'';
+  position:absolute;
+  width:100%; height:100%;
+  top:0; left:0;
+  background:rgba(0,0,0,0.3);
+  z-index: -1;
+}
+#main-display h3 {
+  z-index: 1;
+}
+#weather-data {
+  display: flex;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  flex: 1 0 auto;
+  list-style: none;
+  padding: 1rem;
+  background-color: var(--light-grey);
+}
+
+.box li {
+  flex: 1 0 auto;
+  margin-bottom: 1rem;
+}
+
+.box li span {
+  color: var(--white);
+  display: inline-block;
+  margin-left: 0.75rem;
+}
+
+/******************************************
+/* Header
+/*******************************************/
+
+/******************************************
+/* Header
+/*******************************************/
+
+

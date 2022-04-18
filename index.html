@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="This is where your description goes">
+    	<meta name="keywords" content="one, two, three">
+		<title>Weather Data</title>
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Rubik&family=Sen&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container">
+		<header id="search">
+			<form action="#">
+				<input type="text" id="input" name="input" value="" placeholder="Zip or City">
+				<input type="submit" id="go" name="submit" value="Go">
+			</form>
+		</header>
+
+		<section id="location">
+			<h3 id="data-location">Kansas City, Missouri</h3>
+		</section>
+		<section id="date-time">
+			<h3>Sunday</h3>
+			<h3>12:00 AM</h3>
+		</section>
+
+		<section id="main-display" class="mb" style="background-image: url('https://s33009.pcdn.co/wp-content/uploads/elementor/thumbs/clouds-pe4l0o3cqp1vjkeq7mb5wv8pxpkyqoyn1tfunsxpy2.jpg');">
+			<h3>Cloudy</h3>
+			<h3 id="degrees">65&deg;</h3>
+			<span>H 65 / L 39</span>
+		</section>
+
+		<section id="weather-data">
+			<div class="column">
+				<ul class="box mb">
+					<li>humidity <span>45%</span></li>
+					<li>wind <span>3 m/s</span></li>
+					<li>feels like <span>29.4</span></li>
+				</ul>
+				<ul class="box">
+					<li>pressure <span>1019 mb</span></li>
+					<li>precipitation <span>0 in</span></li>
+					<li>visibility <span>9 miles</span></li>
+				</ul>
+			</div>
+			<div class="column ml">
+				<ul class="box">
+					<li>2:00 AM <span>25</span></li>
+					<li>4:00 AM <span>25</span></li>
+					<li>4:00 <span>25</span></li>
+					<li>4:00 <span>25</span></li>
+					<li>4:00 <span>25</span></li>
+					<li>4:00 <span>25</span></li>
+					<li>4:00 <span>25</span></li>
+					<li>4:00 <span>25</span></li>
+					<li>4:00 <span>25</span></li>
+				</ul>
+			</div>
+		</section>
+	</div>
+	<!-- container -->
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
