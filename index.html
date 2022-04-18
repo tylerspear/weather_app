@@ -3,9 +3,8 @@
 	<head>
     	<meta charset="utf-8">
     	<meta name="description" content="This is where your description goes">
-    	<meta name="keywords" content="one, two, three">
+    	<meta name="keywords" content="">
 		<title>Weather Data</title>
-		<!-- external CSS link -->
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,23 +21,22 @@
 		</header>
 
 		<section id="location">
-			<h3 id="data-location">Kansas City, Missouri</h3>
+			<h3 id="data-location"></h3>
 		</section>
 		<section id="date-time">
-			<h3>Sunday</h3>
-			<h3>12:00 AM</h3>
+			<h3 id="dt-day"></h3>
 		</section>
 
 		<section id="main-display" class="mb" style="background-image: url('https://s33009.pcdn.co/wp-content/uploads/elementor/thumbs/clouds-pe4l0o3cqp1vjkeq7mb5wv8pxpkyqoyn1tfunsxpy2.jpg');">
-			<h3>Cloudy</h3>
-			<h3 id="degrees">65&deg;</h3>
-			<span>H 65 / L 39</span>
+			<h3 id="data-condition"></h3>
+			<h3 id="data-degrees"></h3>
+			<span id="data-high-low"></span>
 		</section>
 
 		<section id="weather-data">
 			<div class="column">
 				<ul class="box mb">
-					<li>humidity <span>45%</span></li>
+					<li>humidity <span id="data-humidity"></span></li>
 					<li>wind <span>3 m/s</span></li>
 					<li>feels like <span>29.4</span></li>
 				</ul>
@@ -64,6 +62,7 @@
 		</section>
 	</div>
 	<!-- container -->
-		<script type="text/javascript" src="js/main.js"></script>
+		<script type='text/javascript' src='js/config.js'></script>
+		<script type="text/javascript" src="js/index.js"></script>
 	</body>
 </html>
