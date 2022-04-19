@@ -32,8 +32,14 @@ function getWeather(coords){
         pressEl.textContent = `${data.current.pressure} mb`
         uvEl.textContent = data.current.uvi
         vizEl.textContent = `${data.current.visibility} m`
+        hourlyEl.innerHTML = `<tr><th>time</th>
+                              <th>temp</th>
+                              <th>conditions</th>
+                              </tr>`
+
         for(let i = 0; i < 20; i++) {
           if(i % 2 === 0) {
+            console.log(i)
             let tr = document.createElement('tr')
             tr.innerHTML = `
               <td>${convertUTC(data.hourly[i].dt)}</td>
@@ -43,6 +49,7 @@ function getWeather(coords){
             hourlyEl.appendChild(tr)
           }
         }
+
       })
       .catch(err => {
           console.log(`error ${err}`)

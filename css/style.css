@@ -166,6 +166,9 @@ body {
   flex: 0 1 15%;
   text-align: left;
 }
+.box td {
+  color: var(--white);
+}
 
 /******************************************
 /* Header
